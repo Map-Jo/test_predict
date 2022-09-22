@@ -12,7 +12,7 @@ Code_name_list = Stockcode.index.tolist()
 
 if Name in Code_name_list:
     code_num = Stockcode.at[Name, 'Symbol']
-    # stock_df = fdr.DataReader(code_num)
+    stock_df = fdr.DataReader(code_num)
     # stock_df
 
 elif Name not in Code_name_list:
