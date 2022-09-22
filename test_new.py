@@ -5,7 +5,7 @@ import pandas_datareader as pdr
 
 st.title('Korea Stocks 📈')
 Stockcode = pd.read_csv('data/stockcode_pdr.csv')
-Stockcode.set_index('Name', inplace = True)
+Stockcode.set_index('name', inplace = True)
 
 Name = st.text_input('주식종목입력하슈', placeholder='예시) 삼성전자')
 Code_name_list = Stockcode.index.tolist()
