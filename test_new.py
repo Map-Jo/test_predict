@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import FinanceDataReader as fdr
+import pandas_datareader as pdr
 
 
 st.title('Korea Stocks 📈')
@@ -12,8 +12,9 @@ Code_name_list = Stockcode.index.tolist()
 
 if Name in Code_name_list:
     code_num = Stockcode.at[Name, 'Symbol']
+    code_num = code_num + '.KS'
     # st.text(code_num)
-    stock_df = fdr.DataReader(code_num, '2022')
+    stock_df = pdr.get_data_yahoo(code_num)
     # stock_df
 
 elif Name not in Code_name_list:
