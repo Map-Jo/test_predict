@@ -2,3 +2,4 @@ pandas
 streamlit
 finance-dataReader
 bs4
+pandas_datareader
